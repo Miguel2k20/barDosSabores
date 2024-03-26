@@ -1,0 +1,266 @@
+body {
+    font-family: "Roboto";
+    padding-bottom: 2rem;
+    background-color: #020109;
+    color: #fff;
+}
+
+.intro {
+    height: 70vh;
+    position: relative;
+    z-index: -1;
+}
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: fixed url('../imagens/bgIntro.jpg') bottom center;
+    background-size: cover;
+    opacity: 0.5; /* Ajuste o valor da opacidade conforme desejado */
+}
+.intro::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(2,1,9,1) 0%, rgba(0,212,255,0) 50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.intro .titleName {
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.search-space {
+    display: flex;
+    justify-content: center;
+}
+.search-space .search-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.search-space .container-serach {
+    position: relative;
+}
+.search-space .container-serach input {
+    width: calc(100% - 3rem);
+    display: block;
+    border-radius: 50px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+.search-space .container-serach button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.3rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 25px;
+    cursor: pointer;
+    background: transparent;
+    display: block;
+}
+.search-space .container-serach svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.drinkList {
+    color: #fff;
+    display: block;
+    width: calc(100% - 4rem);
+    margin: 2rem auto 0;
+    max-width: 1100px;
+    padding: 2rem;
+}
+.drinkList .list {
+    display: none;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.drinkList .list.active {
+    display: flex;
+}
+.drinkList .list .item {
+    cursor: pointer;
+    width: calc(33.33% - 10px);
+    margin-bottom: 10px;
+    margin: 0 5px 10px;
+}
+.drinkList .list .item .imagem {
+    overflow: hidden;
+    height: 350px;
+    width: 100%;
+}
+.drinkList .list .item .imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.drinkList .list .item:hover .imagem img {
+    transform: scale(1.2);
+}
+.drinkList .list .item .info {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.drinkList .list .item .info .drink-title {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 0.5rem;
+    position: relative;
+    text-align: center;
+}
+.drinkList .list .item .info .drink-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    transition: all 0.5s ease;
+}
+.drinkList .list .item:hover .info .drink-title::after {
+    width: 10%;
+}
+
+.no-list {
+    display: none;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.no-list.active {
+    display: block;
+}
+
+.baseboard {
+    text-align: center;
+}
+.baseboard a {
+    color: #fff;
+}
+
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9;
+    background: #02010985;
+}
+.loading.active {
+    display: flex;
+}
+.loading .icon {
+    width: 50px;
+    height: 50px;
+    animation: rotate 2s linear infinite;
+}
+.loading .icon svg {
+    width: 100%;
+    fill: #fff;
+}
+
+.modal-space {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #020109a8;
+}
+.modal-space.active {
+    display: flex;
+}
+.modal-space .modal {
+    position: relative;
+    padding: 2rem;
+    width: calc(100% - 2.5rem);
+    max-width: 1100px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    color: #020109;
+    margin: 0 0.5rem;
+}
+.modal-space .modal .title-modal {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.modal-space .modal .imagem {
+    max-width: 250px;
+    width: 100%;
+}
+.modal-space .modal .text {
+    max-width: 800px;
+    margin-left: 1rem;
+}
+.ingredients {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+.ingredients-title {
+    font-size: 1rem;
+    font-weight: 500;
+    display: none;
+}
+.ingredients-title.active {
+    display: block;
+}
+.ingredients .ingredient {
+    margin-top: 0.5rem;
+}
+.modal-space .modal .imagem img {
+    width: 100%;
+}
+.modal-space .modal .close {
+    position: absolute;
+    cursor: pointer;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+}
+.modal-space .modal .close svg {
+    width: 100%;
+    height: 100%;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

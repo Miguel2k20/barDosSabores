@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="imagex/png" href="./imagens/icons.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/responsiveStyle.css">
+
+    <title>Bar dos Sabores</title>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="icon">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                width="50px" height="50px" viewBox="0 0 26.349 26.35"
+                xml:space="preserve">
+            <g>
+                <g>
+                    <circle cx="13.792" cy="3.082" r="3.082"/>
+                    <circle cx="13.792" cy="24.501" r="1.849"/>
+                    <circle cx="6.219" cy="6.218" r="2.774"/>
+                    <circle cx="21.365" cy="21.363" r="1.541"/>
+                    <circle cx="3.082" cy="13.792" r="2.465"/>
+                    <circle cx="24.501" cy="13.791" r="1.232"/>
+                    <path d="M4.694,19.84c-0.843,0.843-0.843,2.207,0,3.05c0.842,0.843,2.208,0.843,3.05,0c0.843-0.843,0.843-2.207,0-3.05
+                        C6.902,18.996,5.537,18.988,4.694,19.84z"/>
+                    <circle cx="21.364" cy="6.218" r="0.924"/>
+                </g>
+            </g>
+            </svg>
+        </div>
+    </div>
+    <div class="intro"> 
+        <h1 class="titleName animate__animated animate__fadeInDown">
+            Bem vindo ao Bar dos Sabores
+        </h1>
+    </div>
+    <div class="drinkList">
+        <div class="search-space">
+            <form class="search" id="search-js">
+                <h2 class="search-title">O que você está procurando?</h2>
+                <div class="container-serach">
+                    <input type="text" placeholder="Ex: Whisky" name="drink-name">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" id="search"><path d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z"></path></svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="list active" id="list-js">
+            <div class="item" id="item-drink">
+                <div class="imagem">
+                    <img src="./imagens/drinkDefault.png" alt="">
+                </div>
+                <div class="info">
+                    <h5 class="drink-title">
+                    </h5>
+                </div>
+            </div>
+            <div class="item" id="item-drink">
+                <div class="imagem">
+                    <img src="./imagens/drinkDefault.png" alt="">
+                </div>
+                <div class="info">
+                    <h5 class="drink-title">
+                    </h5>
+                </div>
+            </div>
+            <div class="item" id="item-drink">
+                <div class="imagem">
+                    <img src="./imagens/drinkDefault.png" alt="">
+                </div>
+                <div class="info">
+                    <h5 class="drink-title">
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="no-list" id="drink-empty">
+            <h2>Nenhuma bebida encontrada com esse nome! :(</h2>
+        </div>
+        <div class="no-list" id="server-error">
+            <h2>Houve algum problema nos servidores e já estamos corrigindo <br> volte mais tarde e tente novamente</h2>
+        </div>
+    </div>
+    <div class="baseboard">
+        <span>Criado por: <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-miguel-mendon%C3%A7a-665334187/">Miguel</a></span>
+    </div>
+    <div class="modal-space" id="modal-space">
+        <div class="modal">
+            <div class="close" id="close-js">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F"/>
+                </svg>
+            </div>
+            <div class="imagem">
+                <img src="">
+            </div>
+            <div class="text">
+                <h3 class="title-modal"></h3>
+                <h4 class="ingredients-title" id="ingredients-title">Ingredientes:</h3>
+                <ul class="ingredients">
+                    <li class="ingredient">Lorem lorem</li>
+                </ul>
+                <div class="info">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./scripts/script.js"></script>
+</html>

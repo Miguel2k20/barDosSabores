@@ -1,0 +1,57 @@
+@media (max-width: 1024px) {
+    .intro {
+        height: 60vh;
+    }
+    .titleName {
+        font-size: 3rem;
+    }
+    .drinkList {
+        padding: 1rem;
+        width: calc(100% - 2rem);
+    }
+    .search-space .search-title {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 960px) {
+    .drinkList .list .item {
+        width: calc(50% - 10px);
+    }
+    .drinkList .list .item .imagem {
+        height: 250px;
+    }
+    .drinkList .list .item:hover .imagem img {
+        transform: scale(1);
+    }
+    .drinkList .list .item .info .drink-title::after{
+        width: 10%;
+    }
+    .modal-space .modal .imagem{
+        max-width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .intro {
+        height: 80vh;
+    }
+    .intro .titleName {
+        font-size: 1.5rem;
+    }
+    .search-space .search-title {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .drinkList .list .item {
+        width: calc(100% - 5px);
+    }
+    .modal-space .modal {
+        display: block;
+    }
+    .modal-space .modal .text{
+        text-align: center;
+        margin: 0;
+    }
+    .modal-space .modal .imagem {
+        margin: 0 auto 1rem;
+    }
+}
